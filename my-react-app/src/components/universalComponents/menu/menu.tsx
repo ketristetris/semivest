@@ -1,11 +1,13 @@
-import "./menu.scss"
+import "./menu.scss";
 
-export default Menu = () => {
-    return(
+const Menu = () => {
+  return(
     <div className="menu-container">
         <div className="menu">
-        
+
         </div>
     </div>
-    )
+  )
 };
+
+export default Menu;

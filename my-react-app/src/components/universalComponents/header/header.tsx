@@ -1,5 +1,10 @@
-import "./header.scss"
+import "./header.scss";
 
-export default Header = () => {
-
+const Header = () => {
+  return (
+    <div className="header">
+    </div>
+  );
 };
+
+export default Header;

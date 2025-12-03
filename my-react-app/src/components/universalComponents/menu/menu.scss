@@ -1,10 +1,12 @@
 .menu-container{
     background-color: white;
-    padding: 32px 48px;
-    height: auto;
+    padding: 58px 28px;
+    height: 100vh;
     width: 290px;
     box-sizing: border-box;
 }
 .menu{
-
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }

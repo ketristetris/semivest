@@ -3,8 +3,28 @@
 :root {
  --Grey-800: #0A0A0A;
  --Grey-600: #5F5F5F;
+ --Grey-75: #F6F6F6;
+ --Grey-200: #EDEDED;
 };
 
 body{
     color: var(--Grey-800);
+}
+.viewportContainer{
+    display: flex;
+}
+.container{
+    padding: 20px 20px 20px 0px;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+}
+
+.bigCard{
+    height: 100%;
+    flex: 1;
+    box-sizing: border-box;
+    border-radius: 16px;
+    border: 1px solid var(--Grey-200);
+    background: var(--Grey-75);
 }

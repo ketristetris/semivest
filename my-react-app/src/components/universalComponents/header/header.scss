@@ -1,0 +1,58 @@
+.header{
+    display: flex;
+    padding: 20px 24px;
+    width: 100%;
+    height: 96px;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 12px;
+    background: var(--bg-primary, #FFF);
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.04), 0 2px 24px 0 rgba(0, 0, 0, 0.04);
+}
+
+.searchInput{
+    display: flex;
+    width: 736px;
+    height: 56px;
+    padding: 10px 20px 10px 16px;
+    box-sizing: border-box;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border: 0cap;
+    border-radius: 12px;
+    background: var(--Grey-75, #F6F6F6);
+}
+.searchPlaceholder{
+    border: 0cap;
+    &:focus{
+        border: 0cap;
+        outline: none;
+    }
+    font-family: var(--font-family-body, Montserrat);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    background-color: var(--Grey-75);
+
+      &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important; /* замена фона */
+    -webkit-text-fill-color: #000 !important;
+    box-shadow: 0 0 0 30px white inset !important;
+    border: none !important;
+    transition: background-color 5000s ease-in-out 0s; /* хак для отключения анимации автозаполнения */
+  }
+
+    &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+  }
+}

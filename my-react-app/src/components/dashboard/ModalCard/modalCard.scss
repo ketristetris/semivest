@@ -1,4 +1,4 @@
-.modalCard{
+.modalCard {
     display: flex;
     width: 636px;
     height: 432px;
@@ -7,42 +7,42 @@
     justify-content: space-between;
     align-items: stretch;
     border-radius: 12px;
-    background: var(--bg-primary, #FFF);
+    background: var(--bg-primary, #fff);
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.04), 0 2px 24px 0 rgba(0, 0, 0, 0.04);
 }
 
-.thisModule{
+.thisModule {
     display: flex;
     flex-direction: column;
     gap: 36px;
 }
 
-.moduleInfo{
+.moduleInfo {
     display: flex;
     flex: 1;
     justify-content: space-between;
 }
 
-.moduleInfoText{
+.moduleInfoText {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
-.moduleInfoHeading{
+.moduleInfoHeading {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     gap: 20px;
 }
 
-.modulePercents{
+.modulePercents {
     display: flex;
-    .h2{
+    .h2 {
         font-size: 32px;
         line-height: 40px;
     }
-    .h5{
+    .h5 {
         margin-bottom: 4px;
         font-size: 20px;
         line-height: 24px;
@@ -52,7 +52,7 @@
     gap: 8px;
     font-weight: 500;
 }
-.moduleBadge{
+.moduleBadge {
     max-width: 105px;
     height: 16px;
     padding: 6px 12px;
@@ -67,17 +67,17 @@
     line-height: 16px;
 
     border-radius: 99px;
-    background: var(--bg-secondary, #F6F6F6);
+    background: var(--bg-secondary, #f6f6f6);
 }
-.currentModule{
+.currentModule {
     display: flex;
-    .currentModuleText{
+    .currentModuleText {
         font-size: 16px;
         color: var(--text-secondary);
         line-height: 28px;
         font-weight: 400;
     }
-    .currentModuleName{
+    .currentModuleName {
         color: var(--bg-primary-inverse);
         font-size: 16px;
         line-height: 28px;
@@ -86,34 +86,34 @@
     gap: 4px;
 }
 
-.progressBar{
+.progressBar {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.progressBarText{
+.progressBarText {
     display: flex;
     justify-content: space-between;
 }
-.progressBarHeading{
+.progressBarHeading {
     display: flex;
     gap: 4px;
     color: var(--bg-primary-inverse);
 }
-.coursesCount{
+.coursesCount {
     color: var(--text-secondary);
     font-size: 12px;
 }
-.progressBarGraph{
+.progressBarGraph {
     width: 100%;
     position: relative;
-    img{
+    img {
         width: 100%;
         height: 6px;
         object-fit: cover;
         display: block;
     }
-    .progressBarAccent{
+    .progressBarAccent {
         position: absolute;
         top: 0;
         left: 0;
@@ -125,13 +125,38 @@
     }
 }
 
-.nextModule{
+.nextModule {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
-.
-.Milestone{
+
+.Milestone {
     width: 100%;
-    
+    display: flex;
+}
+.MilestoneIconContainer {
+    display: flex;
+    padding: 9px 11px 15px 13px;
+}
+.nextMilestone {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.MilestoneHeading {
+    font-family: var(--font-family-body, Montserrat);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--text-secondary);
+}
+.MilestoneTask {
+    color: #000;
+    font-family: var(--font-family-body, Montserrat);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
 }

@@ -72,6 +72,7 @@ $height-large: 60px;
 .AccentPrimary {
   background-color: $accent-primary-default;
   color: white;
+  font-weight: 700;
 
   &:hover:not(:disabled) {
     background-color: $accent-primary-hover;
@@ -90,6 +91,7 @@ $height-large: 60px;
 .AccentSecondary {
   background-color: $accent-secondary-default;
   color: $neutral-primary-default;
+  font-weight: 500;
 
   &:hover:not(:disabled) {
     background-color: $accent-secondary-hover;
@@ -108,6 +110,7 @@ $height-large: 60px;
 .NeutralPrimary {
   background-color: $neutral-primary-default;
   color: white;
+  font-weight: 700;
 
   &:hover:not(:disabled) {
     background-color: $neutral-primary-hover;
@@ -126,6 +129,7 @@ $height-large: 60px;
 .NeutralSecondary {
   background-color: $neutral-secondary-default;
   color: $neutral-primary-default;
+  font-weight: 500;
 
   &:hover:not(:disabled) {
     background-color: $neutral-secondary-hover;

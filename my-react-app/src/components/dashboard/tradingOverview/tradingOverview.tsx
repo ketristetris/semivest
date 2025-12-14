@@ -13,10 +13,10 @@ import styles from "./TradingOverview.module.scss";
 
 import arrowOut from "../../../images/svg/ArrowOut.svg";
 import tradeUp from "../../../images/svg/tradeUp.svg";
-import infoGray from "../../../images/svg/infoGray.svg"
+import infoGray from "../../../images/svg/infoGray.svg";
 
-import carpetLeft from "../../../images/svg/Carpet_left.svg"
-import carpetRight from "../../../images/svg/Carpet_right.svg"
+import carpetLeft from "../../../images/svg/Carpet_left.svg";
+import carpetRight from "../../../images/svg/Carpet_right.svg";
 
 const TradingOverview = () => {
     const [currentDate, setCurrentDate] = useState(new Date());
@@ -39,24 +39,24 @@ const TradingOverview = () => {
 
     return (
         <div className={styles.tradingOverview}>
-            <div className={styles.header}>
-                <div>
-                    <h2>Trading Overview</h2>
-                    <p>
-                        Track your trades, strategies, and key market signals
-                        for the day
-                    </p>
+            <div className={styles.left}>
+                <div className={styles.header}>
+                    <div>
+                        <h2>Trading Overview</h2>
+                        <p>
+                            Track your trades, strategies, and key market
+                            signals for the day
+                        </p>
+                    </div>
                 </div>
-                <button className={styles.exportBtn}>
-                    <img src={arrowOut} alt="" />
-                </button>
-            </div>
-
-            <div className={styles.content}>
                 <div className={styles.watchlist}>
                     <div className={styles.watchlistHeader}>
-                        <div className="watchlistHeading"><img src={tradeUp} alt=""/> Watchlist</div>
-                        <button className={styles.infoBtn}><img src={infoGray} alt=""/></button>
+                        <div className={styles.watchlistHeading}>
+                            <img src={tradeUp} alt="" /> Watchlist
+                        </div>
+                        <button className={styles.infoBtn}>
+                            <img src={infoGray} alt="" />
+                        </button>
                     </div>
 
                     <div className={styles.watchlistItems}>
@@ -76,43 +76,62 @@ const TradingOverview = () => {
                         Add Stocks <span>+</span>
                     </button>
                 </div>
-                <div className={styles.calendar}>
-                    <div className={styles.nav}>
-                        <button onClick={prevMonth}><img src={carpetLeft} alt=""/></button>
-                        <span>{format(currentDate, "MMM d")}</span>
-                        <button onClick={nextMonth}><img src={carpetRight} alt=""/></button>
-                    </div>
+            </div>
+            <div className={styles.right}>
+                <button className={styles.exportBtn}>
+                    <img src={arrowOut} alt="" />
+                </button>
+                <div className={styles.content}>
+                    <div className={styles.calendar}>
+                        <div className={styles.nav}>
+                            <button onClick={prevMonth}>
+                                <img src={carpetLeft} alt="" />
+                            </button>
+                            <span>{format(currentDate, "MMM d")}</span>
+                            <button onClick={nextMonth}>
+                                <img src={carpetRight} alt="" />
+                            </button>
+                        </div>
 
-                    <div className={styles.daysHeader}>
-                        {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(
-                            (day) => (
+                        <div className={styles.daysHeader}>
+                            {[
+                                "Sun",
+                                "Mon",
+                                "Tue",
+                                "Wed",
+                                "Thu",
+                                "Fri",
+                                "Sat",
+                            ].map((day) => (
                                 <div key={day} className={styles.dayLabel}>
                                     {day}
                                 </div>
-                            )
-                        )}
-                    </div>
+                            ))}
+                        </div>
 
-                    <div className={styles.daysGrid}>
-                        {days.map((day, index) => {
-                            const isCurrentMonth =
-                                day.getMonth() === monthStart.getMonth();
-                            const isToday =
-                                format(day, "yyyy-MM-dd") ===
-                                format(new Date(), "yyyy-MM-dd");
-                            const dayNumber = format(day, "d");
+                        <div className={styles.daysGrid}>
+                            {days.map((day, index) => {
+                                const isCurrentMonth =
+                                    day.getMonth() === monthStart.getMonth();
+                                const isToday =
+                                    format(day, "yyyy-MM-dd") ===
+                                    format(new Date(), "yyyy-MM-dd");
+                                const dayNumber = format(day, "d");
 
-                            return (
-                                <div
-                                    key={index}
-                                    className={`${styles.day} ${
-                                        !isCurrentMonth ? styles.outside : ""
-                                    } ${isToday ? styles.today : ""}`}
-                                >
-                                    {dayNumber}
-                                </div>
-                            );
-                        })}
+                                return (
+                                    <div
+                                        key={index}
+                                        className={`${styles.day} ${
+                                            !isCurrentMonth
+                                                ? styles.outside
+                                                : ""
+                                        } ${isToday ? styles.today : ""}`}
+                                    >
+                                        {dayNumber}
+                                    </div>
+                                );
+                            })}
+                        </div>
                     </div>
                 </div>
             </div>

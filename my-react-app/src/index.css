@@ -18,7 +18,11 @@
 };
 
 body{
-    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family-body, Montserrat);
+    color: var(--text-primary, #0A0A0A);
+    background-color: var(--bg-primary, #ffffff);
 }
 .viewportContainer{
     display: flex;

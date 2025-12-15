@@ -7,7 +7,7 @@ import {
     format,
     startOfWeek,
 } from "date-fns";
-import styles from "./TradingOverview.module.scss";
+import styles from "./tradingOverview.module.scss";
 
 import arrowOut from "../../../images/svg/ArrowOut.svg";
 import tradeUp from "../../../images/svg/tradeUp.svg";

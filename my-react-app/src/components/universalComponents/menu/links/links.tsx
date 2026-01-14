@@ -1,11 +1,5 @@
 import React from 'react';
-
-import charts from "../../../../images/svg/charts.svg"
-import graduate from "../../../../images/svg/graduate.svg"
-import home from "../../../../images/svg/home.svg"
-import settings from "../../../../images/svg/settings.svg"
-import target from "../../../../images/svg/target.svg"
-import tradeUp from "../../../../images/svg/tradeUp.svg"
+import { MENU_LINKS, IMAGES } from "../../../data";
 
 interface LinkProps {
     logo: string;
@@ -24,12 +18,9 @@ const Link: React.FC<LinkProps> = ({ logo, linkName }) => {
 const Links = () => {
     return(
         <div >
-            <Link logo={home} linkName="Dashboard" />
-            <Link logo={charts} linkName="Learning Analytics" />
-            <Link logo={graduate} linkName="Lesson Library" />
-            <Link logo={tradeUp} linkName="Practice Trading" />
-            <Link logo={target} linkName="Tasks" />
-            <Link logo={settings} linkName="Settings" />
+            {MENU_LINKS.map((link, index) => (
+                <Link key={index} logo={link.logo} linkName={link.linkName} />
+            ))}
         </div>
     )
 }

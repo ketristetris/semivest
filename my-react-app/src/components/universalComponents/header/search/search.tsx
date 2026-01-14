@@ -1,9 +1,9 @@
-import search from "../../../../images/svg/search.svg"
+import { IMAGES } from "../../../data";
 
 const SearchInput: React.FC = () => {
   return (
     <div className="searchInput">
-    <img src={search} alt="search icon"/>
+    <img src={IMAGES.search} alt="search icon"/>
     <input
       className="searchPlaceholder"
       type="text"

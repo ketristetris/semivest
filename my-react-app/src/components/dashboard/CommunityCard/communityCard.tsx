@@ -1,10 +1,5 @@
-import community from "../../../images/svg/Community.svg";
-import union from "../../../images/svg/communityUnion.svg";
-import profilePhoto1 from "../../../images/community card/1.svg";
-import profilePhoto2 from "../../../images/community card/2.svg";
-import profilePhoto3 from "../../../images/community card/3.svg";
-import profilePhoto4 from "../../../images/community card/4.svg";
 import Button from "../../universalComponents/button/button";
+import { IMAGES } from "../../data";
 import "./communityCard.scss";
 
 const CommunityCard = () => {
@@ -12,7 +7,7 @@ const CommunityCard = () => {
         <div className="communityCard">
             <div className="communityTop">
                 <div className="communityHeading">
-                    <img src={community} alt="" />
+                    <img src={IMAGES.community} alt="" />
                     Community
                 </div>
                 <div className="communityText">
@@ -22,11 +17,11 @@ const CommunityCard = () => {
             </div>
             <div className="communityProfilesContainer">
                 <div className="communityProfiles">
-                    <img src={union} alt="" className="starIcon" />
-                    <img src={profilePhoto1} alt="" />
-                    <img src={profilePhoto2} alt="" />
-                    <img src={profilePhoto3} alt="" />
-                    <img src={profilePhoto4} alt="" />
+                    <img src={IMAGES.union} alt="" className="starIcon" />
+                    <img src={IMAGES.profilePhoto1} alt="" />
+                    <img src={IMAGES.profilePhoto2} alt="" />
+                    <img src={IMAGES.profilePhoto3} alt="" />
+                    <img src={IMAGES.profilePhoto4} alt="" />
                 </div>
             </div>
             <Button

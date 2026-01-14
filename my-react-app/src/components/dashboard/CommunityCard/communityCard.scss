@@ -19,6 +19,7 @@ $star-icon-left: 50%;
 }
 
 .communityHeading{
+    min-width: 218px;
     display: flex;
     align-items: center;
     gap: $heading-gap;

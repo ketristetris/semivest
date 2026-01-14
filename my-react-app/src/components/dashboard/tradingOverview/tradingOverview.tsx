@@ -8,20 +8,8 @@ import {
     startOfWeek,
 } from "date-fns";
 import styles from "./tradingOverview.module.scss";
-
-import arrowOut from "../../../images/svg/ArrowOut.svg";
-import tradeUp from "../../../images/svg/tradeUp.svg";
-import infoGray from "../../../images/svg/infoGray.svg";
-
-import carpetLeft from "../../../images/svg/Carpet_left.svg";
-import carpetRight from "../../../images/svg/Carpet_right.svg";
-
-import dots from "../../../images/svg/dots.svg";
 import Button from "../../universalComponents/button/button";
-
-import stockIcon from "../../../images/stock/blank.svg"
-
-import Plus from "../../../images/svg/button_plus.svg"
+import { IMAGES, WATCHLIST_ITEMS } from "../../data";
 
 const TradingOverview = () => {
     const [currentDate, setCurrentDate] = useState(new Date());
@@ -39,12 +27,6 @@ const TradingOverview = () => {
     const prevMonth = () => setCurrentDate(subMonths(currentDate, 1));
     const nextMonth = () => setCurrentDate(addMonths(currentDate, 1));
 
-    const watchlistItems = [
-        { id: 1, symbol: "PLTR", signal: "check signal" },
-        { id: 2, symbol: "PLTR", signal: "check signal" },
-        { id: 3, symbol: "PLTR", signal: "check signal" },
-    ];
-
     return (
         <div className={styles.tradingOverview}>
             <div className={styles.left}>
@@ -58,17 +40,17 @@ const TradingOverview = () => {
                 <div className={styles.watchlist}>
                     <div className={styles.watchlistHeader}>
                         <div className={styles.HeadingTxt}>
-                            <img src={tradeUp} alt="" /> Watchlist
+                            <img src={IMAGES.tradeUp} alt="" /> Watchlist
                         </div>
                         <button className={styles.infoBtn}>
-                            <img src={infoGray} alt="" />
+                            <img src={IMAGES.infoGray} alt="" />
                         </button>
                     </div>
 
                     <div className={styles.watchlistItems}>
-                        {watchlistItems.map((item) => (
+                        {WATCHLIST_ITEMS.map((item) => (
                             <div key={item.id} className={styles.watchlistItem}>
-                                <div className={styles.stockIcon}><img src={stockIcon} alt=""/></div>
+                                <div className={styles.stockIcon}><img src={IMAGES.stockIcon} alt=""/></div>
                                 <div className={styles.stockInfo}>
                                     <div className={styles.strong}>
                                         {item.symbol}
@@ -78,7 +60,7 @@ const TradingOverview = () => {
                                     </div>
                                 </div>
                                 <button className={styles.moreBtn}>
-                                    <img src={dots} alt="" />
+                                    <img src={IMAGES.dots} alt="" />
                                 </button>
                             </div>
                         ))}
@@ -91,22 +73,22 @@ const TradingOverview = () => {
                     onClick={() => console.log("Go!")}
                 >
                     Add Stocks
-                    <img src={Plus} alt="" />
+                    <img src={IMAGES.Plus} alt="" />
                 </Button>
             </div>
             <div className={styles.right}>
                 <button className={styles.exportBtn}>
-                    <img src={arrowOut} alt="" />
+                    <img src={IMAGES.arrowOut} alt="" />
                 </button>
                 <div className={styles.content}>
                     <div className={styles.calendar}>
                         <div className={styles.nav}>
                             <button onClick={prevMonth}>
-                                <img src={carpetLeft} alt="" />
+                                <img src={IMAGES.carpetLeft} alt="" />
                             </button>
-                            <div className={styles.actualDate}>{format(currentDate, "MMM d")}</div>
+                            <div className={styles.actualDate}>{format(currentDate, "MMM yyyy")}</div>
                             <button onClick={nextMonth}>
-                                <img src={carpetRight} alt="" />
+                                <img src={IMAGES.carpetRight} alt="" />
                             </button>
                         </div>
 
@@ -136,7 +118,6 @@ const TradingOverview = () => {
                                 const isActive = 
                                     format(day, "yyyy-MM-dd") === format(activeDate, "yyyy-MM-dd");
                                 const dayNumber = format(day, "d");
-
                                 return (
                                     <div
                                         key={index}

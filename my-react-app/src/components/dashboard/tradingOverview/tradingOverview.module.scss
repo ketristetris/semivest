@@ -167,7 +167,9 @@
                     &.outside {
                         color: var(--text-disable);
                     }
-
+                    &.today{
+                        color: var(--bg-accent);
+                    }
                     &.isActive {
                         background: var(--bg-accent);
                         color: var(--text-primary-inverse);

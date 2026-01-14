@@ -1,17 +1,12 @@
 import "./modalCard.scss";
-import leaf from "../../../images/svg/leaf.svg";
-import progress from "../../../images/svg/progress.svg";
-import videoBlank from "../../../images/videoBlank.png";
-import progressBarEmpty from "../../../images/svg/progressBarBlank.svg";
 import Button from "../../universalComponents/button/button";
-import targetColorful from "../../../images/svg/targetColorful.png";
-import buttonIcon from "../../../images/svg/play.svg";
+import { IMAGES, MODAL_CARD_DATA, getProgressPercents } from "../../data";
 
 const ModalCard = () => {
-    const currentLesson = 3;
-    const lessonNumber = 25;
-    const progressPercents = Math.round((currentLesson / lessonNumber) * 100);
-    const currentModule = "Lesson 3 — Analyze Charts";
+    const currentLesson = MODAL_CARD_DATA.currentLesson;
+    const lessonNumber = MODAL_CARD_DATA.lessonNumber;
+    const progressPercents = getProgressPercents(currentLesson, lessonNumber);
+    const currentModule = MODAL_CARD_DATA.currentModule;
     return (
         <div className="modalCard">
             <div className="thisModule">
@@ -23,7 +18,7 @@ const ModalCard = () => {
                                 <div className="h5">Complete</div>
                             </div>
                             <div className="moduleBadge">
-                                <img src={leaf} alt="" />
+                                <img src={IMAGES.leaf} alt="" />
                                 <div className="moduleBadgeName">Beginner</div>
                             </div>
                         </div>
@@ -37,13 +32,13 @@ const ModalCard = () => {
                         </div>
                     </div>
                     <div className="moduleInfoVideo">
-                        <img alt="Modal video" src={videoBlank} />
+                        <img alt="Modal video" src={IMAGES.videoBlank} />
                     </div>
                 </div>
                 <div className="progressBar">
                     <div className="progressBarText">
                         <div className="progressBarHeading">
-                            <img src={progress} alt="" />
+                            <img src={IMAGES.progress} alt="" />
                             <div>Course progress</div>
                         </div>
                         <div className="coursesCount">
@@ -51,7 +46,7 @@ const ModalCard = () => {
                         </div>
                     </div>
                     <div className="progressBarGraph">
-                        <img src={progressBarEmpty} alt="" />
+                        <img src={IMAGES.progressBarEmpty} alt="" />
                         <div
                             className="progressBarAccent"
                             style={{ width: `${progressPercents}%` }}
@@ -62,7 +57,7 @@ const ModalCard = () => {
             <div className="nextModule">
                 <div className="Milestone">
                     <div className="MilestoneIconContainer">
-                        <img src={targetColorful} alt="" />
+                        <img src={IMAGES.targetColorful} alt="" />
                     </div>
                     <div className="nextMilestone">
                         <div className="MilestoneHeading">Next Milestone</div>
@@ -78,7 +73,7 @@ const ModalCard = () => {
                         size="medium"
                         onClick={() => console.log("Go!")}
                     >
-                        <img src={buttonIcon} alt=""/>
+                        <img src={IMAGES.buttonIcon} alt=""/>
                         Continue modul
                     </Button>
                 </div>
